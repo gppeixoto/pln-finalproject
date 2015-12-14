@@ -4,12 +4,15 @@ import cPickle as pickle
 from nltk.corpus import stopwords
 from sklearn.cross_validation import KFold
 from sklearn.feature_extraction.text import TfidfVectorizer as Tfidf
-# from sklearn.
+from sklearn.metrics import precision_recall_fscore_support as prfs
 from sklearn.preprocessing import scale
 from sklearn.svm import LinearSVC
+from sklearn.linear_model import LogisticRegression as MaxEnt
 import twokenize
+import time
 from scipy.sparse import hstack
 
+t0 = time.time()
 stop = stopwords.words("portuguese")
 stop.remove(u'n\xe3o')
 pr = Processor.Processor(stop)
@@ -32,20 +35,86 @@ tweet_tokenizer = twokenize.tokenize
 tfidf = Tfidf(ngram_range=(1,2), binary=True, tokenizer=tweet_tokenizer)
 X = tfidf.fit_transform(normalized_corpus)
 
+
+accs = []
+ps = []
+rs = []
+fs = []
+
+print '#'*40
+print 'NO Twitter Features'
+print 'SVM - Linear Kernel'
+print '#'*40
+print 'ACC\tPR\tRE\tF1'
+print '#'*40
+i=1
 for tr, ts in KFold(n=len(normalized_corpus), n_folds=10):
     train = X[tr]
     test = X[ts]
     clf = LinearSVC()
     clf.fit(train, labels[tr])
-    preds = clf.predict(test)
-    acc1 = (preds == labels[ts]).sum() / (len(preds)+.0)
+    ytrue = labels[ts]
+    ypred = clf.predict(test)
+    acc = (ytrue == ypred).sum() / (len(ypred)+.0)
+    p, r, f, s = prfs(ytrue, ypred, average='macro')
+    accs.append(acc)
+    ps.append(p)
+    rs.append(r)
+    fs.append(f)
+    print "%.2f\t%.2f\t%.2f\t%.2f KFoldRnd%d" % (acc,p,r,f,i)
+    i += 1
+    # train_f = twitterFeatures[tr]
+    # train = hstack([train, train_f])
+    # test_f = twitterFeatures[ts]
+    # test = hstack([test, test_f])
+    # clf.fit(train, labels[tr])
+    # preds = clf.predict(test)
+    # acc2 = (preds == labels[ts]).sum() / (len(preds)+.0)
+    # print 'Acc1: %.2f\t Acc2: %.2f' % (acc1, acc2)
+print '#'*40
+print 'Mean accuracy: %.2f' % (np.mean(accs))
+print 'Mean precision: %.2f' % (np.mean(ps))
+print 'Mean recal: %.2f' % (np.mean(rs))
+print 'Mean f-score: %.2f' % (np.mean(fs))
+
+
+accs = []
+ps = []
+rs = []
+fs = []
+
+print '#'*40
+print 'Using Twitter Features'
+print 'SVM - Linear Kernel'
+print '#'*40
+print 'ACC\tPR\tRE\tF1'
+print '#'*40
+i=1
+for tr, ts in KFold(n=len(normalized_corpus), n_folds=10):
+    train = X[tr]
     train_f = twitterFeatures[tr]
     train = hstack([train, train_f])
+
+    test = X[ts]
     test_f = twitterFeatures[ts]
     test = hstack([test, test_f])
+
+    clf = LinearSVC()
     clf.fit(train, labels[tr])
-    preds = clf.predict(test)
-    acc2 = (preds == labels[ts]).sum() / (len(preds)+.0)
-    print 'Acc1: %.2f\t Acc2: %.2f' % (acc1, acc2)
+    ytrue = labels[ts]
+    ypred = clf.predict(test)
+    acc = (ytrue == ypred).sum() / (len(ypred)+.0)
+    p, r, f, s = prfs(ytrue, ypred, average='macro')
+    accs.append(acc)
+    ps.append(p)
+    rs.append(r)
+    fs.append(f)
+    print "%.2f\t%.2f\t%.2f\t%.2f KFoldRnd%d" % (acc,p,r,f,i)
+    i += 1
+print '#'*40
+print 'Mean accuracy: %.2f' % (np.mean(accs))
+print 'Mean precision: %.2f' % (np.mean(ps))
+print 'Mean recal: %.2f' % (np.mean(rs))
+print 'Mean f-score: %.2f' % (np.mean(fs))
 
-
+print '\n\nOverall execution time: %.0fs' % ((time.time()-t0)) 
