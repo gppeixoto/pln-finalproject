@@ -1,0 +1,48 @@
+Normalizing and extracting features
+...................................................
+Time elapsed on processing and feature extraction: 5s
+########################################
+NO Twitter Features
+SVM - Linear Kernel
+########################################
+ACC PR  RE  F1
+########################################
+0.76    0.74    0.88    0.81 KFoldRnd1
+0.78    0.78    0.89    0.83 KFoldRnd2
+0.76    0.77    0.88    0.82 KFoldRnd3
+0.77    0.77    0.88    0.82 KFoldRnd4
+0.77    0.78    0.89    0.83 KFoldRnd5
+0.78    0.78    0.88    0.83 KFoldRnd6
+0.77    0.77    0.88    0.82 KFoldRnd7
+0.77    0.79    0.87    0.83 KFoldRnd8
+0.76    0.76    0.88    0.81 KFoldRnd9
+0.77    0.78    0.89    0.84 KFoldRnd10
+########################################
+Mean accuracy: 0.77
+Mean precision: 0.77
+Mean recal: 0.88
+Mean f-score: 0.82
+########################################
+Using Twitter Features
+SVM - Linear Kernel
+########################################
+ACC PR  RE  F1
+########################################
+0.76    0.75    0.87    0.81 KFoldRnd1
+0.79    0.79    0.89    0.84 KFoldRnd2
+0.77    0.78    0.87    0.82 KFoldRnd3
+0.77    0.78    0.87    0.82 KFoldRnd4
+0.76    0.78    0.88    0.83 KFoldRnd5
+0.78    0.79    0.87    0.83 KFoldRnd6
+0.77    0.78    0.87    0.83 KFoldRnd7
+0.77    0.79    0.87    0.83 KFoldRnd8
+0.77    0.76    0.88    0.82 KFoldRnd9
+0.78    0.79    0.89    0.84 KFoldRnd10
+########################################
+Mean accuracy: 0.77
+Mean precision: 0.78
+Mean recal: 0.88
+Mean f-score: 0.83
+
+
+Overall execution time: 60s
