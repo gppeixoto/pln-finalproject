@@ -64,14 +64,6 @@ for tr, ts in KFold(n=len(normalized_corpus), n_folds=10):
     fs.append(f)
     print "%.2f\t%.2f\t%.2f\t%.2f KFoldRnd%d" % (acc,p,r,f,i)
     i += 1
-    # train_f = twitterFeatures[tr]
-    # train = hstack([train, train_f])
-    # test_f = twitterFeatures[ts]
-    # test = hstack([test, test_f])
-    # clf.fit(train, labels[tr])
-    # preds = clf.predict(test)
-    # acc2 = (preds == labels[ts]).sum() / (len(preds)+.0)
-    # print 'Acc1: %.2f\t Acc2: %.2f' % (acc1, acc2)
 print '#'*40
 print 'Mean accuracy: %.2f' % (np.mean(accs))
 print 'Mean precision: %.2f' % (np.mean(ps))
@@ -140,14 +132,7 @@ for tr, ts in KFold(n=len(normalized_corpus), n_folds=10):
     fs.append(f)
     print "%.2f\t%.2f\t%.2f\t%.2f KFoldRnd%d" % (acc,p,r,f,i)
     i += 1
-    # train_f = twitterFeatures[tr]
-    # train = hstack([train, train_f])
-    # test_f = twitterFeatures[ts]
-    # test = hstack([test, test_f])
-    # clf.fit(train, labels[tr])
-    # preds = clf.predict(test)
-    # acc2 = (preds == labels[ts]).sum() / (len(preds)+.0)
-    # print 'Acc1: %.2f\t Acc2: %.2f' % (acc1, acc2)
+
 print '#'*40
 print 'Mean accuracy: %.2f' % (np.mean(accs))
 print 'Mean precision: %.2f' % (np.mean(ps))
@@ -216,14 +201,7 @@ for tr, ts in KFold(n=len(normalized_corpus), n_folds=10):
     fs.append(f)
     print "%.2f\t%.2f\t%.2f\t%.2f KFoldRnd%d" % (acc,p,r,f,i)
     i += 1
-    # train_f = twitterFeatures[tr]
-    # train = hstack([train, train_f])
-    # test_f = twitterFeatures[ts]
-    # test = hstack([test, test_f])
-    # clf.fit(train, labels[tr])
-    # preds = clf.predict(test)
-    # acc2 = (preds == labels[ts]).sum() / (len(preds)+.0)
-    # print 'Acc1: %.2f\t Acc2: %.2f' % (acc1, acc2)
+
 print '#'*40
 print 'Mean accuracy: %.2f' % (np.mean(accs))
 print 'Mean precision: %.2f' % (np.mean(ps))
@@ -264,6 +242,7 @@ for tr, ts in KFold(n=len(normalized_corpus), n_folds=10):
     fs.append(f)
     print "%.2f\t%.2f\t%.2f\t%.2f KFoldRnd%d" % (acc,p,r,f,i)
     i += 1
+
 print '#'*40
 print 'Mean accuracy: %.2f' % (np.mean(accs))
 print 'Mean precision: %.2f' % (np.mean(ps))
@@ -292,14 +271,7 @@ for tr, ts in KFold(n=len(normalized_corpus), n_folds=10):
     fs.append(f)
     print "%.2f\t%.2f\t%.2f\t%.2f KFoldRnd%d" % (acc,p,r,f,i)
     i += 1
-    # train_f = twitterFeatures[tr]
-    # train = hstack([train, train_f])
-    # test_f = twitterFeatures[ts]
-    # test = hstack([test, test_f])
-    # clf.fit(train, labels[tr])
-    # preds = clf.predict(test)
-    # acc2 = (preds == labels[ts]).sum() / (len(preds)+.0)
-    # print 'Acc1: %.2f\t Acc2: %.2f' % (acc1, acc2)
+
 print '#'*40
 print 'Mean accuracy: %.2f' % (np.mean(accs))
 print 'Mean precision: %.2f' % (np.mean(ps))
@@ -368,14 +340,7 @@ for tr, ts in KFold(n=len(normalized_corpus), n_folds=10):
     fs.append(f)
     print "%.2f\t%.2f\t%.2f\t%.2f KFoldRnd%d" % (acc,p,r,f,i)
     i += 1
-    # train_f = twitterFeatures[tr]
-    # train = hstack([train, train_f])
-    # test_f = twitterFeatures[ts]
-    # test = hstack([test, test_f])
-    # clf.fit(train, labels[tr])
-    # preds = clf.predict(test)
-    # acc2 = (preds == labels[ts]).sum() / (len(preds)+.0)
-    # print 'Acc1: %.2f\t Acc2: %.2f' % (acc1, acc2)
+
 print '#'*40
 print 'Mean accuracy: %.2f' % (np.mean(accs))
 print 'Mean precision: %.2f' % (np.mean(ps))
