@@ -5,18 +5,18 @@ Time elapsed on processing and feature extraction: 5s
 NO Twitter Features
 SVM - Linear Kernel
 ########################################
-ACC     PR      RE      F1
+ACC	PR	RE	F1
 ########################################
-0.76    0.74    0.88    0.81 KFoldRnd1
-0.78    0.78    0.89    0.83 KFoldRnd2
-0.76    0.77    0.88    0.82 KFoldRnd3
-0.77    0.77    0.88    0.82 KFoldRnd4
-0.77    0.78    0.89    0.83 KFoldRnd5
-0.78    0.78    0.88    0.83 KFoldRnd6
-0.77    0.77    0.88    0.82 KFoldRnd7
-0.77    0.79    0.87    0.83 KFoldRnd8
-0.76    0.76    0.88    0.81 KFoldRnd9
-0.77    0.78    0.89    0.84 KFoldRnd10
+0.76	0.74	0.88	0.81 KFoldRnd1
+0.78	0.78	0.89	0.83 KFoldRnd2
+0.76	0.77	0.88	0.82 KFoldRnd3
+0.77	0.77	0.88	0.82 KFoldRnd4
+0.77	0.78	0.89	0.83 KFoldRnd5
+0.78	0.78	0.88	0.83 KFoldRnd6
+0.77	0.77	0.88	0.82 KFoldRnd7
+0.77	0.79	0.87	0.83 KFoldRnd8
+0.76	0.76	0.88	0.81 KFoldRnd9
+0.77	0.78	0.89	0.84 KFoldRnd10
 ########################################
 Mean accuracy: 0.77
 Mean precision: 0.77
@@ -26,23 +26,170 @@ Mean f-score: 0.82
 Using Twitter Features
 SVM - Linear Kernel
 ########################################
-ACC     PR      RE      F1
+ACC	PR	RE	F1
 ########################################
-0.76    0.75    0.87    0.81 KFoldRnd1
-0.79    0.79    0.89    0.84 KFoldRnd2
-0.77    0.78    0.87    0.82 KFoldRnd3
-0.77    0.78    0.87    0.82 KFoldRnd4
-0.76    0.78    0.88    0.83 KFoldRnd5
-0.78    0.79    0.87    0.83 KFoldRnd6
-0.77    0.78    0.87    0.83 KFoldRnd7
-0.77    0.79    0.87    0.83 KFoldRnd8
-0.77    0.76    0.88    0.82 KFoldRnd9
-0.78    0.79    0.89    0.84 KFoldRnd10
+0.76	0.75	0.87	0.81 KFoldRnd1
+0.79	0.79	0.89	0.84 KFoldRnd2
+0.77	0.78	0.87	0.82 KFoldRnd3
+0.77	0.78	0.87	0.82 KFoldRnd4
+0.76	0.78	0.88	0.83 KFoldRnd5
+0.78	0.79	0.87	0.83 KFoldRnd6
+0.77	0.78	0.87	0.83 KFoldRnd7
+0.77	0.79	0.87	0.83 KFoldRnd8
+0.77	0.76	0.88	0.82 KFoldRnd9
+0.78	0.79	0.89	0.84 KFoldRnd10
 ########################################
 Mean accuracy: 0.77
 Mean precision: 0.78
 Mean recal: 0.88
 Mean f-score: 0.83
+########################################
+NO Twitter Features
+SVM - RBF Kernel
+########################################
+ACC	PR	RE	F1
+########################################
+0.57	0.57	1.00	0.73 KFoldRnd1
+0.62	0.62	1.00	0.76 KFoldRnd2
+0.61	0.61	1.00	0.76 KFoldRnd3
+0.61	0.61	1.00	0.76 KFoldRnd4
+0.65	0.65	1.00	0.79 KFoldRnd5
+0.60	0.60	1.00	0.75 KFoldRnd6
+0.62	0.62	1.00	0.76 KFoldRnd7
+0.64	0.64	1.00	0.78 KFoldRnd8
+0.59	0.59	1.00	0.74 KFoldRnd9
+0.65	0.65	1.00	0.78 KFoldRnd10
+########################################
+Mean accuracy: 0.69
+Mean precision: 0.70
+Mean recal: 0.94
+Mean f-score: 0.79
+########################################
+Using Twitter Features
+SVM - RBF Kernel
+########################################
+ACC	PR	RE	F1
+########################################
+0.57	0.57	1.00	0.73 KFoldRnd1
+0.62	0.62	1.00	0.76 KFoldRnd2
+0.61	0.61	1.00	0.76 KFoldRnd3
+0.61	0.61	1.00	0.76 KFoldRnd4
+0.65	0.65	1.00	0.79 KFoldRnd5
+0.60	0.60	1.00	0.75 KFoldRnd6
+0.62	0.62	1.00	0.76 KFoldRnd7
+0.64	0.64	1.00	0.78 KFoldRnd8
+0.59	0.59	1.00	0.74 KFoldRnd9
+0.65	0.65	1.00	0.78 KFoldRnd10
+########################################
+Mean accuracy: 0.61
+Mean precision: 0.61
+Mean recal: 1.00
+Mean f-score: 0.76
+########################################
+NO Twitter Features
+SVM - Sigmoid Kernel
+########################################
+ACC	PR	RE	F1
+########################################
+0.57	0.57	1.00	0.73 KFoldRnd1
+0.62	0.62	1.00	0.76 KFoldRnd2
+0.61	0.61	1.00	0.76 KFoldRnd3
+0.61	0.61	1.00	0.76 KFoldRnd4
+0.65	0.65	1.00	0.79 KFoldRnd5
+0.60	0.60	1.00	0.75 KFoldRnd6
+0.62	0.62	1.00	0.76 KFoldRnd7
+0.64	0.64	1.00	0.78 KFoldRnd8
+0.59	0.59	1.00	0.74 KFoldRnd9
+0.65	0.65	1.00	0.78 KFoldRnd10
+########################################
+Mean accuracy: 0.61
+Mean precision: 0.61
+Mean recal: 1.00
+Mean f-score: 0.76
+########################################
+Using Twitter Features
+SVM - Sigmoid Kernel
+########################################
+ACC	PR	RE	F1
+########################################
+0.57	0.57	1.00	0.73 KFoldRnd1
+0.62	0.62	1.00	0.76 KFoldRnd2
+0.61	0.61	1.00	0.76 KFoldRnd3
+0.61	0.61	1.00	0.76 KFoldRnd4
+0.65	0.65	1.00	0.79 KFoldRnd5
+0.60	0.60	1.00	0.75 KFoldRnd6
+0.62	0.62	1.00	0.76 KFoldRnd7
+0.64	0.64	1.00	0.78 KFoldRnd8
+0.59	0.59	1.00	0.74 KFoldRnd9
+0.65	0.65	1.00	0.78 KFoldRnd10
+########################################
+Mean accuracy: 0.61
+Mean precision: 0.61
+Mean recal: 1.00
+Mean f-score: 0.76
+########################################
+NO Twitter Features
+MaxEnt
+########################################
+ACC	PR	RE	F1
+########################################
+0.74	0.71	0.93	0.80 KFoldRnd1
+0.77	0.75	0.93	0.83 KFoldRnd2
+0.75	0.74	0.91	0.81 KFoldRnd3
+0.75	0.74	0.92	0.82 KFoldRnd4
+0.76	0.76	0.92	0.83 KFoldRnd5
+0.77	0.75	0.93	0.83 KFoldRnd6
+0.76	0.75	0.92	0.83 KFoldRnd7
+0.76	0.76	0.91	0.83 KFoldRnd8
+0.75	0.73	0.93	0.82 KFoldRnd9
+0.76	0.75	0.93	0.83 KFoldRnd10
+########################################
+Mean accuracy: 0.69
+Mean precision: 0.68
+Mean recal: 0.96
+Mean f-score: 0.79
+########################################
+Using Twitter Features
+MaxEnt
+########################################
+ACC	PR	RE	F1
+########################################
+0.75	0.73	0.91	0.81 KFoldRnd1
+0.78	0.77	0.92	0.84 KFoldRnd2
+0.75	0.75	0.89	0.82 KFoldRnd3
+0.77	0.76	0.90	0.83 KFoldRnd4
+0.76	0.76	0.91	0.83 KFoldRnd5
+0.77	0.76	0.90	0.83 KFoldRnd6
+0.76	0.76	0.90	0.83 KFoldRnd7
+0.77	0.77	0.89	0.83 KFoldRnd8
+0.76	0.74	0.91	0.82 KFoldRnd9
+0.77	0.77	0.91	0.83 KFoldRnd10
+########################################
+Mean accuracy: 0.76
+Mean precision: 0.76
+Mean recal: 0.91
+Mean f-score: 0.82
+########################################
+NO Twitter Features
+Naive Bayes
+########################################
+ACC	PR	RE	F1
+########################################
+0.72	0.69	0.95	0.80 KFoldRnd1
+0.76	0.74	0.95	0.83 KFoldRnd2
+0.75	0.72	0.95	0.82 KFoldRnd3
+0.76	0.73	0.95	0.83 KFoldRnd4
+0.75	0.74	0.95	0.83 KFoldRnd5
+0.76	0.73	0.96	0.83 KFoldRnd6
+0.76	0.73	0.95	0.83 KFoldRnd7
+0.77	0.75	0.94	0.84 KFoldRnd8
+0.74	0.71	0.95	0.81 KFoldRnd9
+0.76	0.74	0.95	0.83 KFoldRnd10
+########################################
+Mean accuracy: 0.76
+Mean precision: 0.74
+Mean recal: 0.93
+Mean f-score: 0.82
 
 
-Overall execution time: 60s
+Overall execution time: 2502s
