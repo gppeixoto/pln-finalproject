@@ -54,7 +54,7 @@ class Processor:
         qst_last = []
         neg_count = []
         tw_length = [] 
-        labels = [] 
+        labels = []
         ll = len(tweetList)
         dot = ll / 50
         for x in xrange(ll):
